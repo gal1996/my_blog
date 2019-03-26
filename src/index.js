@@ -1,26 +1,26 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './css/index.css';
-import Home from '../src/materials/Home'
 import * as serviceWorker from './javascript/serviceWorker';
 import { Provider } from 'react-redux';
 import { createStore, applyMiddleware } from 'redux';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import reducers from './reducers';
 import promise from 'redux-promise';
-//import PostsIndex from './components/posts_index';
-//import PostsNew from './components/posts_new';
-//import PostsShow from './components/posts_show';
-const createStoreWithMiddleware = applyMiddleware(promise)(createStore);
+import Home from '../src/materials/Home/HomeContainer.js';
+import Posts from '../src/materials/Posts/PostsContainer.js';
+import Create from '../src/materials/Create/CreateConteiner.js';
 
-//ReactDOM.render(<App />, document.getElementById('root'));
+const createStoreWithMiddleware = applyMiddleware(promise)(createStore);
 
 ReactDOM.render(
   <Provider store={createStoreWithMiddleware(reducers)}>
     <BrowserRouter>
       <div>
         <Switch>
-          <Route path="/" component={Home} />
+          <Route path="/index" component={Home} />
+          <Route path="/posts/:id" component={Posts} />
+          <Route path="/create" component={Create} />
         </Switch>
       </div>
     </BrowserRouter>
