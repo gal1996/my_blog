@@ -1,0 +1,14 @@
+li {
+  list-style-type: none;
+  float: right;
+}
+
+img {
+  width: 70px;
+  height: 70px;
+}
+
+#top {
+  background-color: aquamarine;
+}
+
