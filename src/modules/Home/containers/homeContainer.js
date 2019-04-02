@@ -10,7 +10,7 @@ export default class HomeContainers extends Component {
       <div id="home">
         <Header />
         <Top />
-        {/*<Profile />
+        {/*
           <Article />
         */}
       </div>
