@@ -1,14 +1,41 @@
-li {
+/*top*/
+
+#top {
+  background: linear-gradient(to right, rgba(0, 90, 167, 0.8), rgba(255, 255, 255, 0.8)),
+    url(https://firebasestorage.googleapis.com/v0/b/my-blog-bee05.appspot.com/o/%E8%83%8C%E6%99%AF%E7%94%BB%E5%83%8F%2F%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88%202019-04-02%2015.26.26.png?alt=media&token=c506f5a0-3079-4d76-9046-8b5b4bd5a948);
+  height: 200px;
+}
+/*title*/
+
+#title h1{
+  margin-top: 0px;
+  margin-bottom: 30px;
+  margin-left: 20px;
+}
+
+#title {
+  color: white;
+}
+
+/*description*/
+
+#description {
+  color: white;
+  margin: 10px;
+}
+
+/*links*/
+
+.facebookIcon {
+  background: rgba(0, 90, 167, 0,.8);
+}
+
+.links li {
   list-style-type: none;
   float: right;
 }
 
-img {
+.links img {
   width: 70px;
   height: 70px;
 }
-
-#top {
-  background-color: aquamarine;
-}
-

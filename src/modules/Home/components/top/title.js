@@ -1,7 +1,7 @@
 import React from 'react'
 
 const title = (props) => (
-  <div className="title">
+  <div id="title">
     <h1>uugo's tech blog</h1>
   </div>
 );

@@ -18,7 +18,7 @@ ReactDOM.render(
     <BrowserRouter>
       <div>
         <Switch>
-          <Route path="/index" component={Home} />
+          <Route path="/home" component={Home} />
           {/*
           <Route path="/posts/:id" component={Posts} />
           <Route path="/create" component={Create} />
