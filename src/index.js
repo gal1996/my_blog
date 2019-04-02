@@ -1,15 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './css/index.css';
+import './stylesheets/index.css';
 import * as serviceWorker from './javascript/serviceWorker';
 import { Provider } from 'react-redux';
 import { createStore, applyMiddleware } from 'redux';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import reducers from './reducers';
 import promise from 'redux-promise';
-import Home from '../src/materials/Home/HomeContainer.js';
-import Posts from '../src/materials/Posts/PostsContainer.js';
-import Create from '../src/materials/Create/CreateConteiner.js';
+import Home from '../src/modules/Home/containers/homeContainer.js';
+//import Posts from '../src/moduls/Posts/containers/postsContainer.js';
+//import Create from '../src/modules/Create/containers/createContainer.js';
 
 const createStoreWithMiddleware = applyMiddleware(promise)(createStore);
 
@@ -18,9 +18,11 @@ ReactDOM.render(
     <BrowserRouter>
       <div>
         <Switch>
-          <Route path="/index" component={Home} />
+          <Route path="/home" component={Home} />
+          {/*
           <Route path="/posts/:id" component={Posts} />
           <Route path="/create" component={Create} />
+          */}
         </Switch>
       </div>
     </BrowserRouter>

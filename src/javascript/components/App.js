@@ -4,7 +4,6 @@ import '../../css/App.css';
 
 class App extends Component {
   render() {
-    console.log('hoge')
     return (
       <div className="App">
         <header className="App-header">
