@@ -21,7 +21,7 @@ const links = (props) => (
       <li>
         <div className="qiitaLink">
           <a target="_blank" href="https://qiita.com/mochosan" rel="noreferrer noopener">
-            <img src="https://firebasestorage.googleapis.com/v0/b/my-blog-bee05.appspot.com/o/qiita.png?alt=media&token=86a6a6a1-e5ed-400e-9fbe-8b4facdb9c4f" className="qiitaIcon" alt="" />
+            <img src="https://firebasestorage.googleapis.com/v0/b/my-blog-bee05.appspot.com/o/qiita.png?alt=media&token=a87dc7e2-6b5c-433d-a25c-28c5d9a7e9b6" className="qiitaIcon" alt="" />
           </a>
         </div>
       </li>

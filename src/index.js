@@ -10,6 +10,7 @@ import promise from 'redux-promise';
 import Home from '../src/modules/Home/containers/homeContainer.js';
 //import Posts from '../src/moduls/Posts/containers/postsContainer.js';
 //import Create from '../src/modules/Create/containers/createContainer.js';
+//import Profile from '../src//modules/Profile/containers/ProfileContainer.js';
 
 const createStoreWithMiddleware = applyMiddleware(promise)(createStore);
 
@@ -22,6 +23,7 @@ ReactDOM.render(
           {/*
           <Route path="/posts/:id" component={Posts} />
           <Route path="/create" component={Create} />
+          <Route path="/profile" component={Profile} />
           */}
         </Switch>
       </div>

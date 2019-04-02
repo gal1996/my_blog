@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
-import Top from '../components/top/top.js'
-import Header from '../components/header/header.js'
-//import Profile from '../components/Profile.js'
-//import Article from '../components/Article.js'
+import Top from '../components/top/top.js';
+import Header from '../components/header/header.js';
+import Article from '../containers/Article/Article.js';
 
 export default class HomeContainers extends Component {
   render() {
@@ -10,9 +9,7 @@ export default class HomeContainers extends Component {
       <div id="home">
         <Header />
         <Top />
-        {/*
-          <Article />
-        */}
+        <Article />
       </div>
     )
   }
