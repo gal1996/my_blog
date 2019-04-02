@@ -2,7 +2,7 @@ import React from 'react'
 
 const title = (props) => (
   <div id="title">
-    <h1>uugo's tech blog</h1>
+    <h1>ううごのtech学び日記</h1>
   </div>
 );
 

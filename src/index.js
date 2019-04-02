@@ -6,13 +6,13 @@ import { Provider } from 'react-redux';
 import { createStore, applyMiddleware } from 'redux';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import reducers from './reducers';
-import promise from 'redux-promise';
+import promise from 'redux-promise-midlleware';
 import Home from '../src/modules/Home/containers/homeContainer.js';
 //import Posts from '../src/moduls/Posts/containers/postsContainer.js';
 //import Create from '../src/modules/Create/containers/createContainer.js';
 //import Profile from '../src//modules/Profile/containers/ProfileContainer.js';
 
-const createStoreWithMiddleware = applyMiddleware(promise)(createStore);
+const createStoreWithMiddleware = applyMiddleware(promise())(createStore);
 
 ReactDOM.render(
   <Provider store={createStoreWithMiddleware(reducers)}>
