@@ -10,7 +10,7 @@ import { Provider } from 'react-redux';
 import initFirebase from './models/index';
 
 //firebaseとの接続
-initFirebase();
+initFirebase()
 const createStoreWithMiddleware = applyMiddleware(promise)(createStore);
 
 ReactDOM.render(

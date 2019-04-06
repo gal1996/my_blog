@@ -13,10 +13,6 @@ const config = {
 
 const initFirebase = () => {
     firebase.initializeApp(config);
-    const db = firebase.firestore();
-    console.log(db)
-    const exp = db.collection('posts');
-    console.log(exp);
 }
 
 export default initFirebase;

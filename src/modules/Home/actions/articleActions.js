@@ -1,15 +1,14 @@
-import axios from 'axios';
+import * as bizLogic from '../../../models/Home/bizLogic';
 
 export function setPosts() {
+    console.log('hega')
     return function(dispatch) {
         dispatch({type: "SET_POSTS"});
-
-    axios.get("")
-        .then((response) => {
-            dispatch({type: "SET_POSTS_FULFILLED", data: response.data})
-        })
-        .catch((err) => {
-            dispatch({type: "SET_POSTS_REJECTED", data: err})
+        const actions = bizLogic.getPosts();
+        console.log(actions)
+        actions.forEach(element => {
+            console.log(element)
+            dispatch(element);
         });
-    };
+    }
 }
