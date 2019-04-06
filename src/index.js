@@ -2,32 +2,20 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './stylesheets/index.css';
 import * as serviceWorker from './javascript/serviceWorker';
-import { Provider } from 'react-redux';
+import App from '../src/modules/App/App.js';
 import { createStore, applyMiddleware } from 'redux';
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
-import reducers from './reducers';
-import promise from 'redux-promise-midlleware';
-import Home from '../src/modules/Home/containers/homeContainer.js';
-//import Posts from '../src/moduls/Posts/containers/postsContainer.js';
-//import Create from '../src/modules/Create/containers/createContainer.js';
-//import Profile from '../src//modules/Profile/containers/ProfileContainer.js';
+import promise from 'redux-promise';
+import reducers from './vender/reducers/index.js';
+import { Provider } from 'react-redux';
+import initFirebase from './models/index';
 
-const createStoreWithMiddleware = applyMiddleware(promise())(createStore);
+//firebaseとの接続
+initFirebase();
+const createStoreWithMiddleware = applyMiddleware(promise)(createStore);
 
 ReactDOM.render(
   <Provider store={createStoreWithMiddleware(reducers)}>
-    <BrowserRouter>
-      <div>
-        <Switch>
-          <Route path="/home" component={Home} />
-          {/*
-          <Route path="/posts/:id" component={Posts} />
-          <Route path="/create" component={Create} />
-          <Route path="/profile" component={Profile} />
-          */}
-        </Switch>
-      </div>
-    </BrowserRouter>
+    <App />
   </Provider>
 , document.querySelector('#root'));
 
@@ -35,3 +23,5 @@ ReactDOM.render(
 // unregister() to register() below. Note this comes with some pitfalls.
 // Learn more about service workers: https://bit.ly/CRA-PWA
 serviceWorker.unregister();
+
+

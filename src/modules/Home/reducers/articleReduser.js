@@ -1,4 +1,4 @@
-const initialState = { post: [], error: null};
+const initialState = { posts: [], error: ''};
 
 export default function reducer( state = initialState, action ){
     switch (action.type) {
@@ -12,7 +12,7 @@ export default function reducer( state = initialState, action ){
             return {...state, post: action.data};
         }
         default: {
-            break;
+            return state
         }
     }
 }
