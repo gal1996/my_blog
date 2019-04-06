@@ -1,5 +1,5 @@
-import firebase from 'firebase';
-import 'firebase/firestore';
+import firebase from '@firebase/app';
+import '@firebase/firestore';
 
 const config = {
     apiKey: "AIzaSyApXTBX3TSpb2-1mTWuhbZS5EWcjCtRrsw",
@@ -11,11 +11,8 @@ const config = {
 };
 
 
-
 const initFirebase = () => {
     firebase.initializeApp(config);
-    const auth = firebase.auth();
-    console.log(auth);
     const db = firebase.firestore();
     console.log(db)
     const exp = db.collection('posts');
