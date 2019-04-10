@@ -5,16 +5,20 @@ import * as serviceWorker from './javascript/serviceWorker';
 import App from '../src/modules/App/App.js';
 import { createStore, applyMiddleware } from 'redux';
 import promise from 'redux-promise';
-import reducers from './vender/reducers/index.js';
+import thunk from 'redux-thunk';
+import reducer from './vender/reducers/index.js';
 import { Provider } from 'react-redux';
 import initFirebase from './models/index';
 
 //firebaseとの接続
 initFirebase()
-const createStoreWithMiddleware = applyMiddleware(promise)(createStore);
+
+//middlewareの設定
+const middleware = applyMiddleware(thunk);
+const store = createStore(reducer, middleware);
 
 ReactDOM.render(
-  <Provider store={createStoreWithMiddleware(reducers)}>
+  <Provider store={store}>
     <App />
   </Provider>
 , document.querySelector('#root'));

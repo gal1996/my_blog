@@ -11,12 +11,13 @@ import Home from '../Home/containers/homeContainer.js';
 
 
 class App extends Component {
+
     render() {
         return (
             <BrowserRouter>
             <div>
                 <Switch>
-                <Route path="/home" component={Home} />
+                <Route path="/home" render={ () => <Home posts={this.props} /> } />
                 {/*
                 <Route path="/posts/:id" component={Posts} />
                 <Route path="/create" component={Create} />
