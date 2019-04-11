@@ -1,17 +1,13 @@
 import * as bizLogic from '../../../models/Home/bizLogic';
 
-export default function getPosts() {
+export default function getPostsAction() {
     return async function(dispatch) {
-        const posts = await bizLogic.fetchPosts();
-        console.log(posts)
-        const actions = [];
-        posts.forEach((post) => {
-            actions.push({type:'SET_POSTS_FULFILLED', payload: post});
+        const data = await bizLogic.fetchPosts();
+        const posts = [];
+        data.forEach((post) => {
+            posts.push(post.data());
         })
-        console.log(actions)
-        actions.forEach(element => {
-            console.log(element)
-            dispatch(element);
-        });
+        const action = {type: "SET_POSTS_FULFILLED", payload: posts};
+        dispatch(action);
     }
 }

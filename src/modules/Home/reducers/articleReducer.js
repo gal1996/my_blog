@@ -6,10 +6,10 @@ export default function reducer( state = initialState, action ){
             break;
         }
         case 'SET_POSTS_REJECTED': {
-            return {...state, error: action.data};
+            return {...state, error: action.payload};
         }
         case 'SET_POSTS_FULFILLED': {
-            return {...state, payload: action.data};
+            return {...state, posts: action.payload};
         }
         default: {
             return state

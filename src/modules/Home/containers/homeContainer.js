@@ -2,19 +2,18 @@ import React, { Component } from 'react';
 import Top from '../components/top/top.js';
 import Header from '../../../templates/header/header.js';
 import Article from '../containers/Article/Article.js';
-import getPosts from '../actions/articleActions';
+import getPostsAction from '../actions/articleActions';
 
 export default class HomeContainers extends Component {
-  componentDidMount(){
-    console.log('hogehoge')
-    this.props.posts.dispatch(getPosts());
+  async componentDidMount(){
+    await this.props.props.dispatch(getPostsAction());
   }
   render() {
     return (
       <div id="home">
         <Header />
         <Top />
-        <Article />
+        <Article posts={this.props.props.articleReducer.posts}/>
       </div>
     )
   }

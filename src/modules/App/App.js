@@ -11,13 +11,12 @@ import Home from '../Home/containers/homeContainer.js';
 
 
 class App extends Component {
-
     render() {
         return (
             <BrowserRouter>
             <div>
                 <Switch>
-                <Route path="/home" render={ () => <Home posts={this.props} /> } />
+                <Route path="/home" render={ () => <Home props={this.props} /> } />
                 {/*
                 <Route path="/posts/:id" component={Posts} />
                 <Route path="/create" component={Create} />
@@ -31,6 +30,6 @@ class App extends Component {
 }
 
 const mapStateToProps = (state) => {
-    return { state };
+    return state;
 }
 export default connect(mapStateToProps)(App)
