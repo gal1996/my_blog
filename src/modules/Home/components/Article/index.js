@@ -2,7 +2,7 @@ import React from 'react';
 
 const index = (props) => (
     <div id='heading'>
-        <p>Articles</p>
+        <h1>学び一覧</h1>
     </div>
 )
 

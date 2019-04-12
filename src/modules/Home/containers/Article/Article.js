@@ -6,8 +6,9 @@ import '../../../../stylesheets/Home/article.css';
 const articles = (props) => {
     //making posts component list
     const posts = [];
+    console.log()
     for(let i in props.posts){
-        posts.push(<li key={i}><Post post={props.posts[i]}/></li>)
+        posts.push(<li key={i}><Post post={props.posts[i]} index={props.posts.length - i}/></li>)
     }
 
     return(

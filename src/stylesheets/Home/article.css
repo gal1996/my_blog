@@ -7,3 +7,39 @@
 #article {
     background: white;
 }
+
+#article h1 {
+    margin: 0px;
+}
+
+#article ul li {
+    list-style-type: none;
+}
+
+#article .post {
+    width: 800px;
+    border: solid 2px black;
+    border-radius: 30px;
+    margin: auto;
+    margin-bottom: 5px;
+    background: lightcyan;
+}
+
+#article .postTitle {
+    text-align: center;
+}
+
+#article .postDate {
+    text-align: right;
+    margin-right: 5px;
+}
+
+#article .postContent {
+    margin-left: 10px;
+}
+
+#article a {
+    text-decoration: none;
+    color: black;
+    width: 800px;
+}

@@ -18,7 +18,7 @@ class App extends Component {
                 <Switch>
                 <Route path="/home" render={ () => <Home props={this.props} /> } />
                 {/*
-                <Route path="/posts/:id" component={Posts} />
+                <Route path="/post/:id" component={Posts} />
                 <Route path="/create" component={Create} />
                 <Route path="/profile" component={Profile} />
                 */}
