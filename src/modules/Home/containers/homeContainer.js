@@ -1,13 +1,19 @@
 import React, { Component } from 'react';
 import Top from '../components/top/top.js';
 import Header from '../../../templates/header/header.js';
-import Article from '../containers/Article/Article.js';
-import getPostsAction from '../actions/articleActions';
+import Article from '../../../templates/Articles/Article';
+import getPostsAction from '../../../vender/actions/articleActions';
 
 export default class HomeContainers extends Component {
-  async componentDidMount(){
-    await this.props.props.dispatch(getPostsAction());
+  constructor(props) {
+    super(props);
+    this.props.props.dispatch(getPostsAction());
   }
+
+  /*
+  componentDidMount(){
+    this.props.props.dispatch(getPostsAction());
+  }*/
   render() {
     return (
       <div id="home">

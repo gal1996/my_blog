@@ -1,7 +1,7 @@
 import React from 'react';
-import Index from '../../components/Article/index.js';
-import Post from '../../components/Article/Post.js';
-import '../../../../stylesheets/Home/article.css';
+import Index from '../../modules/Home/components/Article/index.js';
+import Post from './Post.js';
+import '../../stylesheets/Home/article.css';
 
 const articles = (props) => {
     //making posts component list

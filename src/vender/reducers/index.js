@@ -1,4 +1,4 @@
 import { combineReducers } from "redux";
-import articleReducer from '../../modules/Home/reducers/articleReducer.js'
+import articleReducer from './articleReducer.js'
 
 export default combineReducers({articleReducer})

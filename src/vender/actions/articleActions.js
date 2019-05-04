@@ -1,4 +1,4 @@
-import * as bizLogic from '../../../models/Home/bizLogic';
+import * as bizLogic from '../../models/Home/bizLogic.js';
 
 export default function getPostsAction() {
     return async function(dispatch) {
