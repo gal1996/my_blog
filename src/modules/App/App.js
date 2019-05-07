@@ -16,9 +16,9 @@ class App extends Component {
             <BrowserRouter>
             <div>
                 <Switch>
-                <Route path="/home" render={ () => <Home props={this.props} /> } />
-                <Route path='/articles' render={ () => <Articles props={this.props} /> } />
-                <Route path="/post/:id" render={ () => <Post props={this.props} /> } />
+                <Route path="/home" render={ () => <Home dispatcher={this.props} /> } />
+                <Route path='/articles' render={ () => <Articles dispatcher={this.props}/> } />
+                <Route path="/post/:id" render={ ({match}) => <Post dispatcher={this.props} match={match} /> } />
                 {/*
                 <Route path="/create" component={Create} />
                 <Route path="/profile" component={Profile} />

@@ -7,13 +7,9 @@ import getPostsAction from '../../../vender/actions/articleActions';
 export default class HomeContainers extends Component {
   constructor(props) {
     super(props);
-    this.props.props.dispatch(getPostsAction());
+    this.props.dispatcher.dispatch(getPostsAction());
   }
 
-  /*
-  componentDidMount(){
-    this.props.props.dispatch(getPostsAction());
-  }*/
   render() {
     return (
       <div id="home">

@@ -1,13 +1,14 @@
-import React , { Component } from 'react';
-import * as bizLogic from '../../../models/Home/bizLogic.js';
+import { Component } from 'react';
+import getPostsAction from '../../../vender/actions/articleActions';
 
 export default class Post extends Component {
     constructor(props){
         super(props);
-        this.postsQusry = bizLogic.fetchPosts();
+        this.props.dispatcher.dispatch(getPostsAction());
     }
 
     render() {
+        console.log(this.props);
         return (
             null
         )
