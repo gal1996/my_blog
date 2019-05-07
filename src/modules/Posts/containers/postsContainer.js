@@ -1,22 +1,19 @@
 import React, { Component } from 'react';
 import getPostsAction from '../../../vender/actions/articleActions.js';
 import Articles from '../../../templates/Articles/Article.js'
+import Header from '../../../templates/header/header.js';
 
 export default class HomeContainers extends Component {
-  constructor(props) {
-    super(props);
-    this.posts = [];
-  }
-
   componentDidMount(){
-    this.props.props.dispatch(getPostsAction());
+    this.props.dispatcher.dispatch(getPostsAction());
   }
 
   render() {
-    return (
-      <div id="createAll">
-        <Articles posts={this.props.props.articleReducer.posts}/>
-      </div>
-    )
+      return (
+        <div id="createAll">
+          <Header />
+          <Articles posts={this.props.dispatcher.articleReducer.posts}/>
+        </div>
+      )
   }
 }

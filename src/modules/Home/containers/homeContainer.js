@@ -15,7 +15,7 @@ export default class HomeContainers extends Component {
       <div id="home">
         <Header />
         <Top />
-        <Article posts={this.props.props.articleReducer.posts}/>
+        <Article posts={this.props.dispatcher.articleReducer.posts}/>
       </div>
     )
   }
